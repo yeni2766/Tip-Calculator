@@ -14,10 +14,11 @@
           <form>
             <section class = 'billsection'>
               <label for="bill-label">Bill</label>
+              <span class="icon"></span>
               <input type="text" id="bill-input" value = 0.00 required>
             </section>
             <section class = 'tip-section'>
-              <label for="tip-input">Select Tip</label>
+              <label for="tip-input">Select Tip %</label>
               <div class="tip-options">
                 <button type="button" class="tip-btn" data-tip="5">5%</button>
                 <button type="button" class="tip-btn" data-tip="10">10%</button>
@@ -32,6 +33,7 @@
             </section>
             <section class = 'people'>
               <label for="people-input">Number of People</label>
+              <span class="icon1"></span>
               <input type="text" id="people-input" value = 1 required>
             </section>
           </form>
@@ -40,10 +42,13 @@
           <div class="results">
             <section class="result-group">
               <label for="tip-amount-value" class="tip-amount-value">Tip Amount</label>
+              
               <div class="result-value" id="tip-amount-value">$0.00</div>
+              <span class = 'perPerson'>/ Person</span>
             </section>
             <section class="result-group">
               <label for="total-bill-value"class="total-bill-value">Total Bill</label>
+              <span class = 'perPerson'>/ Person</span>
               <div class="result-value" id="total-bill-value">$0.00</div>
             </section>
           </div>
