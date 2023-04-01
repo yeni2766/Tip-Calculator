@@ -1,0 +1,151 @@
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+    width: 60%;
+    height:350px;
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: small;
+    font-style: normal;
+  }
+.calculator .tip-amount-value{
+ color: white;
+}
+.result-value{
+  font-size: 34px;
+  position:absolute;
+margin-top: -10px;
+color: turquoise;
+}
+.calculator .total-bill-value{
+  color: white;
+ }
+  .calculator .billsection {
+    position: relative;
+    bottom:50px;
+  }
+
+ #bill-input{
+  display: block;
+  margin-top: 10px;
+  width:300px;
+  height:25px;
+  }
+form{
+  position: relative;
+  top:10px;
+}
+
+  .calculator  section  form  .tip-section {
+  position: relative;
+  bottom:25px;
+  }
+  .calculator  section  form  .tip-options{
+    position: relative;
+   top:25px;
+    }
+  
+  .calculator-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .calculator-left label {
+    margin-bottom: 10px;
+  }
+  
+  .tip-options {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  .tip-options button{
+    height:35px;
+    font-family: 'Space Mono', monospace;
+    background-color:  hsl(183, 100%, 15%);
+    border-radius: 5px;
+    color:white;
+  }
+  
+  .custom-tip {
+    width: 100%;
+  }
+  
+  .calculator-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .tip-amount p,
+  .total-bill p {
+    margin-bottom: 10px;
+  }
+ 
+  #reset-btn {
+    margin-top: 20px;
+  }
+  button{
+    padding: 0;
+border: none;
+background: none;
+  }
+  .resultsection{
+    background-color: hsl(183, 100%, 15%);
+    position: relative;
+    right:30px;
+    width:350px;
+    height:320px;
+    border-radius: 10px;
+  }
+  .people #people-input{
+ display: block;
+ margin-top: 10px;
+ width:300px;
+ height:25px;
+  }
+  
+#reset-btn{
+  position: relative;
+  top:70px;
+  left:45px;
+  width:75%;
+  height:40px;
+text-transform: uppercase;
+border-radius: 5px;
+
+color:  hsl(183, 100%, 15%); 
+font-family: 'Space Mono', monospace;
+background-color:  turquoise;
+}
+  .results{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+
+    top:0px;
+    padding:10px;
+  }
+
+  .results .result-group{
+    display: flex;
+flex-direction: row;
+margin-top: 50px;
+
+  }
+
+  .results .result-group .result-value{
+margin-left: 200px;
+ }

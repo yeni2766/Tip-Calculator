@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+<link rel = 'stylesheet' href = 'style.css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class ="calculator">
+        <section>
+          <form>
+            <section class = 'billsection'>
+              <label for="bill-label">Bill</label>
+              <input type="number" id="bill-input" required>
+            </section>
+            <section class = 'tip-section'>
+              <label for="tip-input">Select Tip</label>
+              <div class="tip-options">
+                <button type="button" class="tip-btn" data-tip="5">5%</button>
+                <button type="button" class="tip-btn" data-tip="10">10%</button>
+                <button type="button" class="tip-btn" data-tip="15">15%</button>
+                <button type="button" class="tip-btn" data-tip="20">20%</button>
+                <button type="button" class="tip-btn" data-tip="25">25%</button>
+                <section class="custom-tip">
+                  
+                  <button type="button" class="tip-btn custom-tip-btn">Apply</button>
+                </section>
+              </div>
+            </section>
+            <section class = 'people'>
+              <label for="people-input">Number of People</label>
+              <input type="number" id="people-input" value="1" min="1" required>
+            </section>
+          </form>
+        </section>
+        <section class = 'resultsection'>
+          <div class="results">
+            <section class="result-group">
+              <label for="tip-amount-value" class="tip-amount-value">Tip Amount</label>
+              <div class="result-value" id="tip-amount-value">$0.00</div>
+            </section>
+            <section class="result-group">
+              <label for="total-bill-value"class="total-bill-value">Total Bill</label>
+              <div class="result-value" id="total-bill-value">$0.00</div>
+            </section>
+          </div>
+          <button type="button" id="reset-btn">Reset</button>
+        </section>
+    </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<style>
+    
+</style>
+</html>
