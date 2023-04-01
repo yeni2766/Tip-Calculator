@@ -59,11 +59,16 @@ function calculateTip() {
         tipPercentage = parseInt(activeTipBtn.dataset.tip.replace(/\D/g, ''));
     }
 
-    const tipAmount = parseFloat((tipPercentage/100) * billamount / peopleNo);
-    const totalbillAmount = parseFloat(billamount / peopleNo) + tipAmount;
+    if (!isNaN(billamount) && !isNaN(peopleNo)) {//i had to edit the code since i was getting this NaN on my code
+        const tipAmount = parseFloat((tipPercentage/100) * billamount / peopleNo);
+        const totalbillamount = parseFloat(billamount / peopleNo) + tipAmount;
 
-    tipamount.innerHTML = `$${tipAmount.toFixed(2)}`;
-    totalbill.innerHTML = `$${totalbillAmount.toFixed(2)}`;
+        tipamount.innerHTML = `$${tipAmount.toFixed(2)}`;
+        totalbill.innerHTML = `$${totalbillamount.toFixed(2)}`;
+    } else {
+        tipamount.innerHTML = "$0.00";
+        totalbill.innerHTML = "$0.00";
+    }
 }
 
 //here we need event listeners to so always monitor every number to press so it can calculate straight away
@@ -72,9 +77,20 @@ billInput.addEventListener('input',(event) =>{
 calculateTip();
 })
 
-
-
-
+noofPeople.addEventListener('input',(event) =>{
+    calculateTip();
+    })
+    
+btntips.forEach((btn) =>{
+        btn.addEventListener('click',(e)=>{
+            btntips.forEach((tipbtn)=>{
+                calculateTip();
+            });
+            
+        })
+    })
+    
+    
 
 
 
