@@ -1,7 +1,11 @@
 body{
     background-color: hsl(185, 41%, 84%);
 }
-
+input {
+  text-align: right;
+  background: url() no-repeat scroll 7px 7px;
+padding-left:30px;
+}
 .calculator {
     display: flex;
     justify-content: space-between;
@@ -72,6 +76,7 @@ form{
   }
 
   .tip-options button{
+    cursor: pointer;
     height:35px;
     font-family: 'Space Mono', monospace;
     background-color:  hsl(183, 100%, 15%);
@@ -96,6 +101,7 @@ form{
  
   #reset-btn {
     margin-top: 20px;
+    cursor: pointer;
   }
   button{
     padding: 0;
