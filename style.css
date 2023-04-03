@@ -20,7 +20,11 @@ padding-left:30px;
     font-size: small;
     font-style: normal;
   }
-
+.people span{
+font-size:12px;
+display: block;
+color: red;
+}
 @media screen and (max-width:900px){
   .calculator{
     flex-direction: column;
@@ -33,6 +37,7 @@ padding-left:30px;
     box-sizing: border-box;
 
   }
+ 
   .icon1{
 margin: -10px;
 padding-left: 20px;

@@ -6,7 +6,11 @@ const noofPeople = document.querySelector('#people-input');
 const tipamount = document.querySelector('#tip-amount-value');
 const totalbill = document.querySelector('#total-bill-value');
 const btnreset = document.querySelector('#reset-btn');
-const btntips = document.querySelectorAll('.tip-btn')
+const btntips = document.querySelectorAll('.tip-btn');
+const errormessage = document.querySelector('#error-message');
+
+errormessage.style.visibility = 'hidden';
+
 
 
 //making the event for the reset button
@@ -59,6 +63,15 @@ function calculateTip() {
         tipPercentage = parseInt(activeTipBtn.dataset.tip.replace(/\D/g, ''));
     }
 
+    if(peopleNo>0){
+        errormessage.style.visibility = 'hidden';
+    
+    } else{
+        errormessage.style.visibility = 'visible';
+    
+    }
+    //this is the errormessage logic
+
     if (!isNaN(billamount) && !isNaN(peopleNo)) {//i had to edit the code since i was getting this NaN on my code
         const tipAmount = parseFloat((tipPercentage/100) * billamount / peopleNo);
         const totalbillamount = parseFloat(billamount / peopleNo) + tipAmount;
@@ -69,6 +82,15 @@ function calculateTip() {
         tipamount.innerHTML = "$0.00";
         totalbill.innerHTML = "$0.00";
     }
+    if(peopleNo === 0){
+       
+
+        tipamount.innerHTML = "$0.00";
+        totalbill.innerHTML = "$0.00";
+    }//had to do this because i was getting a nAn when the user puts 0
+    else{
+       
+    }
 }
 
 //here we need event listeners to so always monitor every number to press so it can calculate straight away
@@ -78,6 +100,7 @@ calculateTip();
 })
 
 noofPeople.addEventListener('input',(event) =>{
+   
     calculateTip();
     })
     
