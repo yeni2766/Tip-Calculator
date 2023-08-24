@@ -23,3 +23,5 @@ This is a simple tip calculator built using HTML, CSS, and JavaScript. It allows
 
 # Design
 The design of this tip calculator is simple and user-friendly. It features a modern, minimalist style with a monospace font for easy readability. The layout is responsive and adjusts to different screen sizes.
+
+Click <a href = 'https://yeni2766.github.io/Tip-Calculator/'>Here</a>
